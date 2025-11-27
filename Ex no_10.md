@@ -1,41 +1,54 @@
-# EX 9 C program to find the sum of odd digits using do while loop.
+
+# EX 10 C program to find the factorial of a given number using a function with arguments and return type.
 
 ## AIM:
-To write a C program to find the sum of odd digits using do while loop.
+To write a C program to find the factorial of a given number using a function with arguments and return type.
 
 ## Algorithm
-1. 1.Start the program.
-2.Take input of a number num and initialize sum to 0.
-3.Use a do-while loop to extract each digit of num.
-4.Check if the digit is odd; if yes, add it to sum.
-5.Print the sum and end the program.   
+1.Start the program and declare a function factorial(int) with return type.
+
+2.Read a number from the user.
+
+3.Call the factorial function with the number as an argument.
+
+4.Compute factorial in the function using a loop and return result.
+
+5.Display the result in main.
 
 ## Program:
 ```
-/*
-Program to find the sum of odd digits using do while loop.
-Developed by: JAI SRIRAM S
-RegisterNumber: 212222040057
-*/
+
 
 #include <stdio.h>
 
+// Function to calculate factorial
+int factorial(int n)
+{
+    int i, fact = 1;
+    for(i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    return fact;
+}
+
 int main() {
-    int num, sum = 0, digit;
+    int num, result;
+    
+    printf("Enter a number: ");
     scanf("%d", &num);
-    do {
-        digit = num % 10;
-        if (digit % 2 != 0)
-            sum += digit;
-        num /= 10;
-    } while (num != 0);
-    printf("%d\n", sum);
+    
+    result = factorial(num);
+    printf("Factorial of %d = %d\n", num, result);
+    
     return 0;
 }
+
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/d0ff4e69-8f29-4e1b-9a19-c02e204243e6)
+![image](https://github.com/user-attachments/assets/e2e1f1e8-5e69-4a83-b364-6cd622f63802)
+
 
 
 ## Result:
